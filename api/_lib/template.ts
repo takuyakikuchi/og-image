@@ -18,6 +18,8 @@ function getCss(theme: string, fontSize: string, background: string | undefined)
         foreground = 'white';
     }
     return `
+    @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
     @font-face {
         font-family: 'Inter';
         font-style:  normal;
@@ -93,7 +95,7 @@ function getCss(theme: string, fontSize: string, background: string | undefined)
     }
     
     .heading {
-        font-family: 'Inter', sans-serif;
+        font-family: 'M PLUS 1p', 'Inter', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: ${foreground};

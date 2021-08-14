@@ -164,6 +164,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
         messageToast = '',
         loading = true,
         overrideUrl = null,
+        background = '',
     } = state;
     const mdValue = md ? '1' : '0';
     const url = new URL(window.location.origin);
@@ -171,6 +172,9 @@ const App = (_: any, state: AppState, setState: SetState) => {
     url.searchParams.append('theme', theme);
     url.searchParams.append('md', mdValue);
     url.searchParams.append('fontSize', fontSize);
+    if (background) {
+        url.searchParams.append('background', background)
+    }
 
     return H('div',
         { className: 'split' },
@@ -216,6 +220,13 @@ const App = (_: any, state: AppState, setState: SetState) => {
                             console.log('oninput ' + val);
                             setLoadingState({ text: val, overrideUrl: url });
                         }
+                    })
+                }),
+                H(Field, {
+                    label: 'Background img URL',
+                    input: H(TextInput, {
+                        value: background,
+                        oninput: (val: string) => setLoadingState({ background: val }),
                     })
                 }),
             )

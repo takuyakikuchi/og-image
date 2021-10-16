@@ -157,14 +157,14 @@ const App = (_: any, state: AppState, setState: SetState) => {
     const {
         fileType = 'png',
         fontSize = '100px',
-        theme = 'light',
+        theme = 'dark',
         md = true,
         text = '**Hello** World',
         showToast = false,
         messageToast = '',
         loading = true,
         overrideUrl = null,
-        background = 'https://images.unsplash.com/photo-1571656721197-d8f16e3b90d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1696&q=80',
+        background = 'https://images.unsplash.com/photo-1548025396-689d647d00c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1734&q=80',
     } = state;
     const mdValue = md ? '1' : '0';
     const url = new URL(window.location.origin);

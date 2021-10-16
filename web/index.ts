@@ -164,7 +164,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
         messageToast = '',
         loading = true,
         overrideUrl = null,
-        background = '',
+        background = 'https://images.unsplash.com/photo-1571656721197-d8f16e3b90d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1696&q=80',
     } = state;
     const mdValue = md ? '1' : '0';
     const url = new URL(window.location.origin);
